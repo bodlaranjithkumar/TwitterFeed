@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true, // allows 'window' global
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "Raven": false
+  },
+  "rules": {
+    "max-len": "off", // do not enforce a mx-line length by default
+    "react/forbid-prop-types": ["error", { "forbid": ["any"] }], // do not allow the "any" proptype
+    "react/jsx-filename-extension": "off", // ability to use JSX in a *.js file extension
+    "react/no-render-return-value": "off", // trust ReactDOM.render return call
+    "react/require-default-props": "warn" // you really should provide default values where necessary
+  }
+}

@@ -1,0 +1,14 @@
+node_modules
+
+.DS_Store
+npm-debug.log
+
+.jshint*
+jsconfig.json
+typings
+tsd.json
+.vscode
+
+build
+
+dist
