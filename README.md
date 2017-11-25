@@ -5,9 +5,9 @@ A project which uses Twitter API to fetch user timeline. The backend server is b
 
 ### Pre-requisites
 
-dotnet core2
-.Net Framework 4.7
-Visual Studio 2017
+- dotnet core2
+- .Net Framework 4.7
+- Visual Studio 2017
 
 Clone this repo:
 ```bash
@@ -15,5 +15,6 @@ git clone https://github.com/bodlaranjithkumar/TwitterFeed.git.
 ```
 
 ```bash
+Open TwitterFeed.sln in Visual Studio 2017
 nuget restore
 ```
