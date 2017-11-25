@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "applications", "application
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterFeed.Api.Host", "src\TwitterFeed.Api.Host\TwitterFeed.Api.Host.csproj", "{B647206E-BACC-4534-8269-63A74EE07E4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterFeed.Api.Model", "src\TwitterFeed.Api.Model\TwitterFeed.Api.Model.csproj", "{23C9A038-9B2A-4B62-9A8A-516588A937FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterFeed.Api.Model", "src\TwitterFeed.Api.Model\TwitterFeed.Api.Model.csproj", "{23C9A038-9B2A-4B62-9A8A-516588A937FB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterFeed.Api.Http", "src\TwitterFeed.Api.Http\TwitterFeed.Api.Http.csproj", "{EE2202C0-CF5B-43BF-9F57-A570C3BE9153}"
 EndProject

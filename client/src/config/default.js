@@ -1,5 +1,5 @@
 const productionConfig = {
-  twitterFeedApi: 'http://twitterfeed.azurewebsites.com',
+  twitterFeedApi: 'http://twitterfeedapihost.azurewebsites.net',
 };
 
 const developmentConfig = {
@@ -9,7 +9,7 @@ const developmentConfig = {
 function config() {
   if (typeof window !== 'undefined') {
       // console.log('Application is running in the context of a browser...');
-    if (window.location.hostname === 'twitterfeed.azurewebsites.com') {
+    if (window.location.hostname === 'twitterfeedsalesforce.azurewebsites.net') {
       // Application is running in production
       // console.log('Application is running in production');
       return productionConfig;
