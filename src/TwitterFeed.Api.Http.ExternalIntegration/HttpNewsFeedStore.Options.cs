@@ -1,5 +1,8 @@
 ﻿namespace TwitterFeed.Api.Http.ExternalIntegration
 {
+    /// <summary>
+    /// Represents the options used to configure an <see cref="HttpNewsFeedStoreOptions"/>.
+    /// </summary>
     public class HttpNewsFeedStoreOptions
     {
         public string ScreenName { get; set; }

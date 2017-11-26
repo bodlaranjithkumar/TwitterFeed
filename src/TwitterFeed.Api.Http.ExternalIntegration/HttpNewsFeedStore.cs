@@ -44,15 +44,6 @@ namespace TwitterFeed.Api.Http.ExternalIntegration
                     Count = _options.Value.Count
                 };
 
-                //TwitterService service = new TwitterService("F6vIRF9aO9h6j9l1aCKErBefP", "s1nS5IkBqLXnHUG6AJI4ZxIK37hJiNWGndUeE2nDRIKjx2fmps");
-                //service.AuthenticateWith("65648148-9yuVdKJYybmgb8LViEEyLlbq1pyeKA8ez4Uj4onCe", "l6XixR5RMig8wyXj8Ksly8KddeVgHszWYxbgztpxsAinq");
-                //var options = new ListTweetsOnUserTimelineOptions
-                //{
-                //    TweetMode = TweetMode.Extended,
-                //    ScreenName = "Salesforce",
-                //    Count = 10
-                //};
-
                 var result = await service.ListTweetsOnUserTimelineAsync(options);
                 var twitterStatuses = result.Value.ToList();
 
@@ -71,7 +62,7 @@ namespace TwitterFeed.Api.Http.ExternalIntegration
                         CreatedDate = t.CreatedDate,
                         Content = t.FullText,
                         RetweetCount = t.RetweetCount,
-                        Images = t.ExtendedEntities?.Media
+                        Images = t.ExtendedEntities?.Media  // Null propagation.
                                         .Where(e => e.ExtendedEntityType == TwitterMediaType.Photo)
                                         .Select(e => e.MediaUrlHttps)
                                         .ToList()
@@ -83,6 +74,7 @@ namespace TwitterFeed.Api.Http.ExternalIntegration
             }
             catch (Exception exception)
             {
+                _logger.LogError($"Unable to fetch the feed. Exception: {exception}");
                 throw exception;
             }
         }

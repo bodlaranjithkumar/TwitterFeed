@@ -4,6 +4,9 @@ using TwitterFeed.Api.Model;
 
 namespace TwitterFeed.Api.Http.Store
 {
+    /// <summary>
+    /// Describes a repository capable of retrive <see cref="NewsFeed"/> information.
+    /// </summary>
     public interface IHttpNewsFeedStore
     {
         /// <summary>

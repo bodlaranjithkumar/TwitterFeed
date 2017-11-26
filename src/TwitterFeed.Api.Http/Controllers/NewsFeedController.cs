@@ -22,6 +22,7 @@ namespace TwitterFeed.Api.Http.Controllers
         /// </summary>
         /// <param name="httpNewsFeedStore">The repository used to store and retrieve resources.</param>
         /// <param name="logger">The logger used to write diagnostic information.</param>
+        // Constructor Injection of dependencies using the built in Mirosoft's IOC.
         public NewsFeedController(IHttpNewsFeedStore httpNewsFeedStore, ILogger<NewsFeedController> logger)
         {
             _httpNewsFeedStore = httpNewsFeedStore ?? throw new ArgumentNullException(nameof(httpNewsFeedStore));
